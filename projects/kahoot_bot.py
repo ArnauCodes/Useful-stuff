@@ -10,8 +10,8 @@ PATH = r"C:\Users\annaf\Downloads\Python\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
 driver.get("https://kahoot.it/v2/")
 
-game_pin = "364117" 
-number_of_bots = 10
+game_pin = "" 
+number_of_bots = int()
 
 try:
     input_box = WebDriverWait(driver, 10).until(
