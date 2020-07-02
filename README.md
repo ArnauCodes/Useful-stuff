@@ -1,2 +1,2 @@
 # Useful-stuff
-Useful projects i have been coding recentley
+Useful projects I have been coding recentley
