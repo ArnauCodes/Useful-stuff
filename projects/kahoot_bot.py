@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+# Not finished. The aim is to flood the kahoot lobby with bots. I will also code one which chooses the correct answers among all of them
+
 PATH = r"C:\Users\annaf\Downloads\Python\chromedriver.exe"
 
 driver = webdriver.Chrome(PATH)
