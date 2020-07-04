@@ -8,6 +8,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # You must use your own path for the executable webdriver at: https://chromedriver.chromium.org/downloads
 
+
+# I will probably make the bots choose random options
+
 # Happy 4th of July!!
 
 
