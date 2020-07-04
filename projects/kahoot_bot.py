@@ -4,7 +4,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+# Install selenium in the cmd
+
 # You must use your own path for the executable webdriver at: https://chromedriver.chromium.org/downloads
+
+# Happy 4th of July!!
+
 
 PATH = r"C:\Users\annaf\Downloads\Python\chromedriver.exe" 
 
@@ -27,21 +32,21 @@ def flood_bots():
 				sleep(10)
 
 			input_box = WebDriverWait(driver, 10).until(
-		    EC.presence_of_element_located((By.ID, "game-input"))
+		   		EC.presence_of_element_located((By.ID, "game-input"))
 			)
 
 			input_box.click()
 			input_box.send_keys(game_pin)
 			enter_box = WebDriverWait(driver, 10).until(
-			    EC.presence_of_element_located((By.CLASS_NAME, "enter-button__EnterButton-sc-1o9b9va-0"))
+				EC.presence_of_element_located((By.CLASS_NAME, "enter-button__EnterButton-sc-1o9b9va-0"))
 			)
 			enter_box.click()
 
 			nickname =  WebDriverWait(driver, 10).until(
-			    EC.presence_of_element_located((By.ID, "nickname"))
+				EC.presence_of_element_located((By.ID, "nickname"))
 			)
 			enter_game = WebDriverWait(driver, 10).until(
-			    EC.presence_of_element_located((By.CLASS_NAME, "enter-button__EnterButton-sc-1o9b9va-0"))
+			        EC.presence_of_element_located((By.CLASS_NAME, "enter-button__EnterButton-sc-1o9b9va-0"))
 			)
 
 			nickname.send_keys(" bot " + str(i))
