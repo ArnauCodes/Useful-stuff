@@ -14,7 +14,7 @@ from selenium.webdriver.support import expected_conditions as EC
 # Happy 4th of July!!
 
 
-PATH = r"C:\Users\annaf\Downloads\Python\chromedriver.exe" 
+PATH = r"" 
 
 
 driver = webdriver.Chrome(PATH)
