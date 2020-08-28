@@ -112,7 +112,7 @@ def choose_word(guess):
       curr_hangman += 1
 
   if len(list(SECRET_WORD)) != len(set(SECRET_WORD)):
-    print("Hmmmm, there is probably a word that is repeated twice or more...\n")
+    print("Hmmmm, there is probably a word that is repeated more than once...\n")
 
   for i in range(hints):
     if i not in guess:
@@ -121,9 +121,11 @@ def choose_word(guess):
   wrong_answers = abs(guess_len - len(ca))   
 
   
-choose_word({"h", "o", "l", "a", "e", "p", "D", "r"})
+choose_word({"h", "i"})
 
-u_lost_txt = FONT.render("You lost, the word was: " + SECRET_WORD, 1, BLACK)
+# NOTE: If you lost it is because you have inserted too many guesses, so even when you have the correct word that matches the secret one, it will not be valid
+
+u_lost_txt = FONT.render("You lost (0 guesses remain), the word was: " + SECRET_WORD, 1, BLACK)
 
 # Main game loop
 run = True
@@ -139,9 +141,10 @@ while run:
   rendered_good_ans = FONT.render("Correct answers " + str(len(ca)) + " / " + str(len(SECRET_WORD)), 1, BLACK)
   if final_guess == SECRET_WORD and wrong_answers < 8:
     u_won_txt = FONT.render("YOU WON! It was: " + SECRET_WORD, 1, BLACK)
-    WIN.blit(u_won_txt, (50, HEIGHT // 2))
+    WIN.blit(u_won_txt, (50, (HEIGHT // 2) + 35))
   if wrong_answers >= 8:
-    WIN.blit(u_lost_txt, (50, HEIGHT // 2))
+    curr_hangman = 8
+    WIN.blit(u_lost_txt, (50, (HEIGHT // 2) + 35))
   WIN.blit(images[curr_hangman], (475, 250))
   WIN.blit(stages, (410 , HEIGHT // 4))
   WIN.blit(rendered_good_ans, (50, (HEIGHT * 2) // 3))
