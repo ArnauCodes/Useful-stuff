@@ -17,7 +17,7 @@ if hints >= len(SECRET_WORD) - 1:
   hints = len(SECRET_WORD) - 1
 
 # You must insert your final guess to see if it matches
-final_guess = "".lower()
+final_guess = "pli".lower()
 
 if len(SECRET_WORD) < 2 or len(SECRET_WORD) > 9:
   print("Secret word length must be > 1 and < 10")
@@ -114,10 +114,14 @@ def choose_word(guess):
   if len(list(SECRET_WORD)) != len(set(SECRET_WORD)):
     print("Hmmmm, there is probably a word that is repeated twice or more...\n")
 
+  for i in range(hints):
+    if i not in guess:
+      print("The word includes \'", SECRET_WORD[i], "\' in it")
+
   wrong_answers = abs(guess_len - len(ca))   
 
   
-choose_word({"h", "i"})
+choose_word({"h", "o", "l", "a", "e", "p", "D", "r"})
 
 u_lost_txt = FONT.render("You lost, the word was: " + SECRET_WORD, 1, BLACK)
 
@@ -133,8 +137,6 @@ while run:
       pygame.quit()
   stages = FONT.render("Hangman level: " + str(curr_hangman) + " / 8", 1, BLACK)
   rendered_good_ans = FONT.render("Correct answers " + str(len(ca)) + " / " + str(len(SECRET_WORD)), 1, BLACK)
-  for i in range(hints):
-    hint_txt = FONT.render("The word includes \'" + SECRET_WORD[i] + "\' in it", 1, BLACK)
   if final_guess == SECRET_WORD and wrong_answers < 8:
     u_won_txt = FONT.render("YOU WON! It was: " + SECRET_WORD, 1, BLACK)
     WIN.blit(u_won_txt, (50, HEIGHT // 2))
@@ -143,7 +145,5 @@ while run:
   WIN.blit(images[curr_hangman], (475, 250))
   WIN.blit(stages, (410 , HEIGHT // 4))
   WIN.blit(rendered_good_ans, (50, (HEIGHT * 2) // 3))
-  WIN.blit(hint_txt, (WIDTH // 2, (HEIGHT * 2) // 3))
-
   pygame.display.update()
 pygame.quit()
