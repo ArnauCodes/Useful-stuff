@@ -17,7 +17,7 @@ if hints >= len(SECRET_WORD) - 1:
   hints = len(SECRET_WORD) - 1
 
 # You must insert your final guess to see if it matches
-final_guess = "pli".lower()
+final_guess = "".lower()
 
 if len(SECRET_WORD) < 2 or len(SECRET_WORD) > 9:
   print("Secret word length must be > 1 and < 10")
@@ -117,9 +117,10 @@ def choose_word(guess):
   wrong_answers = abs(guess_len - len(ca))   
 
   
-choose_word({"h", "o", "l", "a", "e", "p", "D", "r"})
+choose_word({"h", "i"})
 
 u_lost_txt = FONT.render("You lost, the word was: " + SECRET_WORD, 1, BLACK)
+
 # Main game loop
 run = True
 
