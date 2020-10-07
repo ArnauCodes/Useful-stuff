@@ -1,9 +1,7 @@
 from scipy.special import lambertw
 from math import sqrt, e
 
-# Using lambert W function with example equation
-from scipy.special import lambertw
-from math import sqrt, e
+# This is an example of how to use the lambert W fucntion from @blackpenredpen
 min_x = -1 / e
 nsq2 = -sqrt(2) / 2
 x = 2*lambertw(sqrt(2) / 2)
@@ -12,8 +10,7 @@ e_to_x = pow(e, x)
 print("Lambert W function examples\ngiven x^2*e^x = 2")
 input()
 print("Square root both sides to get, x * e^x/2 = +-sqrt(2)") 
-input("Everything good until now, however, in this step, the lambert W functio nwould be used if x/2 was multipying e or if the exponent of e was only x")
-input()
+input("Everything good until now, however, in this step, the lambert W functionwould be used if x/2 was multipying e^x/2 or if the exponent of e was only x and we'd hax xe^x")
 print(f"The lambert W function is used as W(x*e^x) = x, where x >= -1/e or x >= {min_x}")
 input()
 print("But we still do not have the same terms, so in order to make the exponent equal to x, we gotta divide two to both sides")
