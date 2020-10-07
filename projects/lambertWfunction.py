@@ -23,4 +23,4 @@ print(f"After applied we get that x/2 = W(+-sqrt(2) / 2), but -sqrt(2) / 2 is {n
 input()
 print("To finish, if we only multpily both sides by two so x/2 cancels and we get 2*W(sqrt(2))")
 input("Here we will plot in the decimal value for x, as x = 2*W(sqrt(2)):")
-print(f"The decimal value for x = {x} wihtout the complex part. So having x^2 will give us {sq_x} that multpilies by e^x.\ne^x is {e_to_x}.And finally we have to multplliy it by {sq_x}. The final answer is 1.9999...\n which is basically aproximation of 2")
+print(f"The decimal value for x = {x} wihtout the complex part. So having x^2 will give us {sq_x} that multpilies by e^x.\ne^x is {e_to_x}.And finally we have to multplliy it by {sq_x}. The final answer is 1.9999...\nwhich is basically aproximation of 2")
