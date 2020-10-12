@@ -1,6 +1,6 @@
 # Solve quadratic equations by Completing the square
 # The input must only contain a, b, c where a, b, c are real numbers. It is also supposed that the equation's form is of: ax^2 + bx + c = 0
-# -1 is also returned for non-real answer not involving the complex world
+# -1 is also returned for non-real answers not involving the complex world
 from math import sqrt
 
 a_term = float(1)
