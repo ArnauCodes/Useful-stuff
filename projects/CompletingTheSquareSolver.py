@@ -10,8 +10,8 @@ c_term = float(-6)
 def solve(a, b, c):
 	if a > 0:
 		a = 1.0
-		b = float(b / a_term)
-		c = float(c / a_term)
+		b = float(b / (a_term))
+		c = float(c / (a_term))
 	rside = c * (-1) 
 	c = (b / 2)**2 
 	r_right = rside + c
