@@ -8,7 +8,7 @@ b_term = float(7)
 c_term = float(-6)
 
 def solve(a, b, c):
-	if a > 0:
+	if a != 0:
 		a = 1.0
 		b = float(b / (a_term))
 		c = float(c / (a_term))
