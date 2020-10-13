@@ -1,11 +1,30 @@
 # Programme to solve quadratic equations by Completing the square
 # The input must only contain a, b, c where a, b, c are real numbers. It is also supposed that the equation's form is of: ax^2 + bx + c = 0
 # -1 is also returned for non-real answers not involving the complex world
+# Programme to solve quadratic equations by Completing the square
+# The input must only contain a, b, c where a, b, c are real numbers. It is also supposed that the equation's form is of: ax^2 + bx + c = 0
+# -1 is also returned for non-real answers not involving the complex world
 from math import sqrt
 
-a_term = float(3)
-b_term = float(7)
-c_term = float(-6)
+a_term = float(2)
+b_term = float(0)
+c_term = float(-7)
+
+def case_no_b(a, b, c):
+	right = c * (-1)
+	right /= a_term
+	try:
+		s = sqrt(right)
+	except ValueError as ve:
+		print(f"No real answers ({ve})")
+		return
+	else:
+		x1 = float(s)
+		x2 = float(s * (-1))
+	return f"First answer = {x1}\nSecond answer = {x2}"
+
+
+
 
 def solve(a, b, c):
 	if a != 0:
@@ -19,12 +38,13 @@ def solve(a, b, c):
 	try:
 		rtd = sqrt(r_right)
 	except ValueError as ve:
-		print(f"No real answers ({ve})")
-		return -1
-
+		return f"No real answers ({ve})"
 	else:
 		x1 = float((b * (-1)) + rtd)
 		x2 = float((b * (-1)) - rtd)
-
 	return f"First answer = {x1}\nSecond answer = {x2}"
-print(solve(a_term, b_term, c_term))
+
+if b_term == 0:
+	print(case_no_b(a_term, b_term, c_term))
+else:
+	print(solve(a_term, b_term, c_term))
