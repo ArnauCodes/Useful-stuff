@@ -1,12 +1,14 @@
-# Updates are coming
 # Programme to solve quadratic equations by Completing the square
 # The input must only contain a, b, c where a, b, c are real numbers. It is also supposed that the equation's form is of: ax^2 + bx + c = 0
 # -1 is also returned for non-real answers not involving the complex world
 from math import sqrt
 
-a_term = float(2)
-b_term = float(0)
-c_term = float(-3)
+a_term = float(-7.5)
+b_term = float(6)
+c_term = float(3)
+
+def case_no_a():
+	return "A can't be 0 as its 2nd degree"
 
 
 def case_no_b(a, b, c):
@@ -15,7 +17,7 @@ def case_no_b(a, b, c):
 	try:
 		s = sqrt(right)
 	except ValueError as ve:
-		return (f"No real answers ({ve})")
+		return f"No real answers ({ve})"
 	else:
 		x1 = float(s)
 		x2 = float(s * (-1))
@@ -42,7 +44,10 @@ def solve(a, b, c):
 
 
 if __name__ == '__main__':
-	if b_term == 0:
-		print(case_no_b(a_term, b_term, c_term))
+	if a_term == 0:
+		print(case_no_a())
 	else:
-		print(solve(a_term, b_term, c_term))
+		if b_term == 0:
+			print(case_no_b(a_term, b_term, c_term))
+		else:
+			print(solve(a_term, b_term, c_term))
