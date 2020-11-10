@@ -94,6 +94,8 @@ while run:
                     atts -= 1
                     inpt = ""
                     correct = False
+                    expand_x = 50
+                    expand_y = 500
 
         if not correct:
             if event.type == pygame.KEYDOWN:
@@ -135,3 +137,4 @@ while run:
     WIN.blit(surface_guess, (0, 390))
     WIN.blit(image, (550, 10))
     pygame.display.update()
+pygame.quit()
