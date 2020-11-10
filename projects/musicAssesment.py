@@ -2,6 +2,7 @@ from getpass import*
 import pygame
 import random
 
+# Assesment started on 3-10-20 and finished on 10-11-20 KESW
 pygame.init()
 rand_artist = ["Teejay Wynn","Romy Salazar","Blade Mata","Luther Gilmour","Denise Willis"]
 rand_songs = ["melon chords","pointy ants","snoozy tom","my time","crazy map"]
