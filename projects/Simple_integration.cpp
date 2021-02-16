@@ -1,12 +1,12 @@
 #include <iostream>
 #include <string>
 
-# Upgraded in the future to integrate more complex functions
 std::string solve(int *exp, std::string *variable, std::string *e_ans, std::string *e_den){
   int dd = std::int_fast16_t((*exp)++);
   int exp_pp = std::int_fast16_t((*exp));
-  return (("(("+*variable)+")" + (*e_ans) + std::to_string(*exp))+")" + (*e_den) + std::to_string(*exp) + " +c";
-}
+  return (*exp) == 0 ? "lnx +c" :   
+(("(("+*variable)+")" + (*e_ans) + std::to_string(*exp))+")" + (*e_den) + std::to_string(*exp) + " +c";
+};
 
 int main() {
   int exp;
@@ -17,4 +17,4 @@ int main() {
   std::cin >> exp;
   std::cout << solve(&exp, &variable, &e_ans, &e_den) << std::endl;
   return 0;
-}
+};
