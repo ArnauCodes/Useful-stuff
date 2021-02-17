@@ -4,7 +4,7 @@
 std::string solve(int *exp, std::string *variable, std::string *e_ans, std::string *e_den){
   int dd = std::int_fast16_t((*exp)++);
   int exp_pp = std::int_fast16_t((*exp));
-  return (*exp) == 0 ? "lnx +c" :   
+  return (*exp) == 0 ? "ln|x| +c" :   
 (("(("+*variable)+")" + (*e_ans) + std::to_string(*exp))+")" + (*e_den) + std::to_string(*exp) + " +c";
 };
 
