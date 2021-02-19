@@ -5,7 +5,7 @@
 std::string solve(int *exp, std::string *variable, std::string *e_ans, double *coeff){
   double nume = (*coeff); 
   (*exp)++;
-  return ((*exp) == -1) ? "ln|x| +c" : (std::to_string(nume / (*exp)) + (*variable) + (*e_ans) + std::to_string((*exp)) + ") +c");
+  return ((*exp)-1 == -1) ? (std::to_string(*coeff)) + "ln|" + (*variable) + "| +c" : (std::to_string(nume / (*exp)) + (*variable) + (*e_ans) + std::to_string((*exp)) + ") +c");
 };
 
 int main() {
